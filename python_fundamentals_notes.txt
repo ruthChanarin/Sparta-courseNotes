@@ -1,0 +1,419 @@
+# Notes from Python Fundamentals
+
+
+# DATA TYPES 
+
+Numbers & Integers
+
+numbers without quotes treated as numerical data
+
+Integer: a Python data type for whole numbers
+Float: a Python data type for decimal numbers
+
+
+# MATH OPERATORS 
+
+ 
+-minus
++plus
+*times
+/ divide
+% remainder after left is divided by the right (Modulo Operator)
+** times twice - (Power Operator)
+// double divide, shows how many integers go into the number, cutting off decimals
+
+Equal to    ==
+Not equal    !=
+Greater than >
+Less than <
+Greater than or equal >=
+Less than or equal <=
+
+
+String Data Type
+
+for text & characters
+strings must be written between single or double speech marks (if they don’t have quotes, program will assume it is a variable)
+‘this is a string’
+“this is a string too”
+
+METHODS - add: 
+.upper() for upper case
+.lower() for lower case
+.title() for title format 
+
+. used to apply things to what came before
+
+Concatenate = add two strings together end to end
+
+
+# VARIABLES
+
+Variable: a reusable label for a data value in Python
+
+like a formula in Excel that refers to a different cell
+
+allows us to make out code less brittle, reducing potential for typos
+
+Creating a variable
+1.type the name (no spaces - use underscores instead)
+2.equal sign
+3.value
+
+book_title = “The Dark Forest”
+
+
+TOP TIP: Write your code not just with a computer in mind, but so that a human can understand it too.
+
+
+
+# CONCATENATION 
+
+a method to substitute place-holders for values
+
+for example, in code to calculate the price of oranges
+
+oranges=12
+cost_per_orange=0.5
+total_cost=oranges*cost_per_orange
+
+you can print the calculation in the following ways: 
+
+print(str(oranges)+" oranges cost £"+str(total_cost))
+
+print("{} oranges cost £{}".format(oranges,total_cost))   
+
+print(f"{oranges} oranges cost £{total_cost}")
+
+
+# Logical Operators
+
+
+mars_choice = input('Would you like to visit Mars? y/n ')
+is_willing = mars_choice == 'y'
+affordable = input('Can you afford to visit Mars? y/n ')
+can_afford = affordable == 'y'
+should_visit_mars = is_willing and can_afford
+print('You should visit Mars: {}'.format(should_visit_mars))
+
+
+# If Statement
+
+used to run a block of code depending on whether a condition is True or False
+
+has: if keyword, a condition, a colon, and underneath an indented body
+
+ie 
+
+password = input('password: ')
+
+if password == 'jumanji':
+    print('Success!')
+
+or 
+
+This program checks whether you are an admin and you have entered the right password:
+
+name = input("What is your name? ")
+is_admin = name == 'admin'
+password = input("What is your password? ")
+is_password_correct = password == 'dinosaurs'
+if is_admin and is_password_correct:
+print('Welcome')
+if not is_admin or not is_password_correct:
+print('Go away')
+
+
+# Else Statements
+
+Used with an if statement and will run when the if condition is False
+
+ie 
+password = input('password: ')
+if password == 'jumanji':
+print('Success!')
+else:
+print('Failure!')
+
+
+# Elif statements 
+
+used after if statements to check whether another condition is True or False
+
+
+ie
+
+dog_size = int(input('How big is the dog? '))
+
+if dog_size > 75:
+print('That is a big dog')
+
+elif dog_size < 25:
+print('That is a small dog')
+
+else:
+print('That is an average dog')
+
+
+
+# LISTS
+
+
+written in square brackets, separated by commas
+
+lottery_numbers = [4,8,12,16]
+
+can be made up of multiple data types
+List values can be accessed using their index in square brackets
+Index is its number in the list, begins with 0
+
+student_names = [
+    'Diedre',    # index 0
+    'Hank',      # index 1
+    'Helena',    # index 2
+    'Salome'     # index 3
+]
+
+print(student_names[0])
+
+You can also set the value in lists using their indexes, as you would set a variable…
+
+clothes = [
+    "shorts",
+    "shoes",
+    "t-shirt",
+]
+if clothes[0] == "shorts":
+    clothes[0] = "warm coat"
+
+print(clothes)
+
+
+List Functions
+
+	len(): the number of items in a list
+	max(): The biggest value in a list
+	min(): The smallest value in a list
+
+for changing the order of a list:
+
+	sorted(): Sorts the
+	reversed(): Reverses the order of a list
+
+i.e. 
+	costs = [1.2, 4.3, 2.0, 0.5]
+
+	print(sorted(costs))
+	print(list(reversed(costs)))
+
+	[0.5, 1.2, 2.0, 4.3]
+	[0.5, 2.0, 4.3, 1.2]	
+
+
+In operator used to check if an item is in a list i.e. True/False
+
+i.e. 
+	student_name = input('Which student are you looking for? ')
+	students = [
+	'Diedre', 'Hank', 'Helena', 'Salome',
+	]
+	if student_name in students:
+	print('{} is in the class'.format(student_name))
+	else:
+	print('{} is not in the class'.format(student_name))
+
+	Which student are you looking for? Hank
+	Hank is in the class
+
+	o6r7hm
+
+The .append() method can be used to add items to a list
+
+i.e. 
+	students = [
+	'Diedre', 'Hank', 'Helena', 'Salome',
+	]
+	student_name = input('What is the name of the new student? ')
+	students.append(student_name)
+	print(students)
+
+	What is the name of the new student? Jo
+	['Diedre', 'Hank', 'Helena', 'Salome', 'Jo']
+
+.insert() is used to add items into a specific place in a list… 
+
+i.e. fruits = ['apple','banana','strawberry']
+fruits.insert(1,'kiwi')
+print(fruits)
+fruits = ['apple', 'kiwi', 'banana', 'strawberry']
+
+remove.list() removes an item
+
+
+
+To add up all the items in a list… 
+
+	costs = [8.30, 7.12, 5.01, 1.00, 0.99, 5.92, 3.50]
+	total_cost = 0
+	for cost in costs:
+	total_cost = total_cost + cost
+
+	print(total_cost)
+	31.839999999999996
+
+or…
+
+	costs = [8.30, 7.12, 5.01, 1.00, 0.99, 5.92, 3.50]
+	total = sum(costs)
+
+	print(total)
+	31.839999999999996
+
+
+# DICTIONARIES 
+
+
+Stores a large collection of labelled items, each items with a Key and a Value
+
+	person = {
+	'name': 'Jessica',
+	'age': 23,
+	'height': 172
+	}
+
+Values in a dictionary are accessed using their Keys
+
+person = {
+'name': 'Jessica',
+'age': 23,
+'height': 172
+}
+print(person['name'])
+Jessica
+
+
+For Loops
+
+for loop: allows you to repeat a block of code multiple times
+
+range as collection of numbers…
+
+ie 
+for number in range(5):
+    print(number)
+
+outputs: 
+0
+1
+2
+3
+4
+
+word as a collection of characters
+
+for character in 'BANANA':
+    print(character)
+
+outputs: 
+
+B
+A
+N
+A
+N
+A
+
+to make lists
+
+for name in 'Mary', 'Lucy', 'Sonam':
+    print(name)
+
+outputs: 
+
+Mary
+Lucy
+Sonam
+
+
+# For Loop: 
+
+	total=0
+	print("*** This statement is OUTSIDE THE LOOP")
+	print("Before the loop executes, our TOTAL is equal to = ", total, '\n')
+	print("-------------------------------------")
+
+	for number in range(3):
+ 	   print("This is a loop execution for digit:"+str(number)+ "inside the loop \n")
+ 	   print("Updating total... (+1) \n")
+
+ 	   total = total+1
+
+	print("--------------------------------------------------------")
+	print("***This statementWe is OUTSIDE the loop now")
+	print("The final TOTAL value is: " + str(total))
+
+
+
+# While Loops
+
+a Loop that only runs if a condition is met
+
+in this case, a user doesn’t know how many iterations will take place
+Beware infinite While Loops, which blow memory usage & encounter errors
+
+
+i.e. a loop to tell customers about store capacity
+
+store_capacity = 5
+while store_capacity > 0:
+    print(f'Please come in.{store_capacity} Spaces  are available')
+    store_capacity = store_capacity - 1
+
+print('/n Please wait for someone to exit')
+
+
+# Functions
+
+
+Why use? 
+
+Code re-useability
+Improves code readability
+Avoids redundancy
+
+like a recipe
+all indented together
+return to pack it all up then can be used later on
+
+def name (arguments):
+	statement
+	statement
+	
+	return value
+
+def statement creates a statement
+after this, you can call/run the function by writing its name with parenthesis ()
+
+
+Passing Arguments
+
+to send info to the function
+declared in the function name after the parenthesis
+
+# Pass single argument to a function
+
+def hello(name):
+    print('Hello,', name)
+
+hello('Maria')
+hello('Kim')
+hello('Olya')
+
+# Pass multiple arguments
+
+def some_function(name, job):
+    print(name,' is a ',job)
+
+some_function('Maria','developer')
+some_function('Lucy','web designer')
+some_function('Sonam','doctor')
