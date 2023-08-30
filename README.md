@@ -1,9 +1,11 @@
 # Sparta-courseNotes
 All my notes and projects from my Data Engineering course at Sparta Global 
 
-I've included so far: 
+This includes the following...
 
--my notes from the Python Fundamentals course
+Python Fundamentals: 
 
--the code-along activities from Python Fundamentals
-
+-Notes from videos
+-Codealong activities
+-Control Flow exercises
+-Function exercises
