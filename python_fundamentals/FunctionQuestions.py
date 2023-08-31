@@ -5,12 +5,15 @@ print("\nQ1a\n")
 
 # A1a:
 
-def divisor_list(n):
-    list = []
-    for x in range(1,n):
-        if n % x == 0:
-            list.append(x)
-    return list
+# create function which takes in an integer, runs through the number from 1 to the integer, and returns 
+# any divisors, adding them to a list
+
+def divisor_list(number: int) -> list:
+    divisors = []
+    for x in range(1,number):
+        if number % x == 0:
+            divisors.append(x)
+    return divisors
 
 
 
@@ -21,10 +24,13 @@ print("\nQ1b\n")
 
 # A1b:
 
-def factor_or_not(x,y):
-    if x in divisor_list(y):
+# Create a function which takes in two integers, and checks if each is a divisor of the other, by running 
+# my divisor list function from before & checking if it contains the number
+
+def factor_or_not(num1: int, num2: int) -> bool:
+    if num1 in divisor_list(num2):
         return True
-    elif y in divisor_list(x):
+    elif num2 in divisor_list(num1):
         return True
     else:
         return False
@@ -42,7 +48,10 @@ print("\nQ2a\n")
 
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-def alphabet_position_checker(letter):
+# Create function which takes in a letter and checks the index of it in the alphabet list (adding 1 to start 
+# at 1 rather than 0)
+
+def alphabet_position_checker(letter: str) -> int:
     position = alphabet.index(letter)+1
     return(position)
 
@@ -54,13 +63,12 @@ print("\nQ2b\n")
 
 # A2b:
 
-# Function which returns 
+# Function which returns ID number consisting of positions of each letter in alphabet, using function from before
 
-def ID_number_generator(name):
-    ID_number_list = [alphabet_position_checker(letter) for letter in name]
-    ID_number_string = ''.join(map(str,ID_number_list))
-    ID_number = int(ID_number_string)
-    return ID_number
+def id_number_generator(name: str) -> str:
+    id_number_list = [alphabet_position_checker(letter) for letter in name]
+    id_number = ''.join(map(str,id_number_list))
+    return id_number
 
 
 print("\nQ2c\n")
@@ -70,15 +78,17 @@ print("\nQ2c\n")
 
 # A2c:
 
-def password_generator(ID):
-    ID_number = ID_number_generator(ID)
-    ID_number_string = str(ID_number)
-    ID_number_list = [digit for digit in ID_number_string]
+# Create function which inputs a name, and turns it into a secret passord
 
+def password_generator(name: str) -> int:
+    id_number = id_number_generator(name)
+    id_number_list = [digit for digit in id_number]
+
+# adds each digit onto a sum to find total, then subtracts that from the id number
     sum = 0
-    for digit in ID_number_list:
+    for digit in id_number_list:
         sum += int(digit)
-    password = ID_number - sum
+    password = id_number - sum
     return password
 
 
@@ -90,7 +100,9 @@ print("\nQ3a\n")
 
 # A3a:
 
-def prime_checker(num):
+# Function which checks if a number has any divisors; if not it's a prime
+
+def prime_checker(num: int) -> bool:
     if num > 1:
         for x in range(2,num):
             if num % x == 0:
@@ -108,7 +120,9 @@ print("\nQ3b\n")
 
 # A3b:
 
-def prime_checker(num):
+# add a try and except clause onto the previous function, to deal with input errors
+
+def prime_checker(num: int) -> bool:
     try:
         if num > 1:
             for x in range(2,num):
@@ -116,7 +130,7 @@ def prime_checker(num):
                     return False
             else:
                 return True
-        elif num > 1: 
+        else:
             return False
     except TypeError:
         print("Please enter valid numbers")

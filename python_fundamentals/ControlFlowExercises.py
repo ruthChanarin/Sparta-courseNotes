@@ -16,9 +16,9 @@ x = [2, 5, 4, 87, 34, 2, 1, 31, 103, 99]
 
 # loop through list; if number is even, return number
 
-for n in x:
-    if n % 2 == 0: 
-        print(n)
+for number in x:
+    if number % 2 == 0: 
+        print(number)
 
 
 
@@ -28,12 +28,12 @@ x = [2, 5, 4, 87, 34, 2, 1, 31, 103, 99]
 
 # A1c:
 
-# run while loop for variable y until y > 5 to run through list checking for evenness
+# run while loop for variable counter until y > 5 to run through list checking for evenness
 
-y = 0 
-while(y<5):
-    if x[y] % 2 ==0:
-        print(x[y])
+counter = 0 
+while(counter<5):
+    if x[counter] % 2 ==0:
+        print(x[counter])
     y += 1
 
 
@@ -48,9 +48,10 @@ names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley
 
 # A2a:
 
+# List comprehension storing the 0 index (the initial) for each name in list of names
 
-first_letters = [name[0] for name in names]
-print(first_letters)
+initials = [name[0] for name in names]
+print(initials)
 
 
 
@@ -60,6 +61,8 @@ print("\nQ2b\n")
 names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley", "Terence Tao"]
 
 # A2b:
+
+# List comprehension storing the index of the space in each name
 
 space_index = [name.index(" ") for name in names]
 print(space_index)
@@ -71,6 +74,8 @@ print("\nQ2c\n")
 names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley", "Terence Tao"]
 
 # A2c:
+
+# List comprehension storing the intial, then first letter of surname (located in the index after the space)
 
 first_and_last_initial = [name[0] + name[name.index(" ")+1] for name in names]
 print(first_and_last_initial)
@@ -87,6 +92,10 @@ list_of_lists = [[1,5,7,3,44,4,1],
 
 
 # A3a:
+
+# Run a for loop through the lists, printing each one where the length of the list equals the length of 
+# a set of that list (without duplicates), to check for duplicates. 
+# If no duplicates are in list (list = set), we print the list
 
 for list in list_of_lists:
     if len(list) == len(set(list)):
@@ -121,9 +130,9 @@ print("\nQ4b\n")
 
 # Create function to check primeness of a number
 
-def prime_number_checker(n):
-    for x in range(2,n):
-        if n % x == 0: 
+def prime_number_checker(number: int) -> bool:
+    for x in range(2,number):
+        if number % x == 0: 
             print("This number is not a prime.")
             return False
         else:
