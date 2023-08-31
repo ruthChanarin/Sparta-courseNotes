@@ -6,7 +6,7 @@ All my notes and projects from my Data Engineering course at Sparta Global  🌍
 
 1. ### Python Fundamentals
 
-![Python Snake](./images/python.webp)
+![Month Python Still](./images/monty%20python.jpeg)
 
 - [*Notes from videos*](./python_fundamentals/python_fundamentals_notes.txt)
 - [*Codealong activities*](./python_fundamentals/python_fundamentals_codealongs.py)
