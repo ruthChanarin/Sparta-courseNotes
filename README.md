@@ -4,7 +4,20 @@ All my notes and projects from my Data Engineering course at Sparta Global  🌍
 
 ## **Contents**
 
-1. ### Python Fundamentals
+1. ### Games  
+
+🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮-🎲-🎮
+
+-  [Fizzbuzz](./games/fizzbuzz.py)
+- [Hangman](./games/hangman.py)
+
+2. ### Object-Orientated Programming (OOP)
+
+![OOP Image](./images/OOP.png)
+
+- [Classes Questions](./OOP/ClassesQuestions.py)
+
+3. ### Python Fundamentals
 
 ![Month Python Still](./images/monty%20python.jpeg)
 
