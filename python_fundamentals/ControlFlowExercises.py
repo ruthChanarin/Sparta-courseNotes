@@ -34,7 +34,7 @@ counter = 0
 while(counter<5):
     if x[counter] % 2 ==0:
         print(x[counter])
-    y += 1
+    counter += 1
 
 
 
