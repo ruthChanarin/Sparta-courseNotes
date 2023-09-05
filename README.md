@@ -28,7 +28,7 @@ All my notes and projects from my Data Engineering course at Sparta Global  🌍
 
 3. ### Rest APIs
 
-- [*Notes from videos*](./rest_apis/rest_apis_notes)
+- [*Notes from videos*](./rest_apis/rest_apis_notes.md)
 
 Content | Completed?
 ------------ | ------------- 
