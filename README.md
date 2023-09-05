@@ -26,6 +26,10 @@ All my notes and projects from my Data Engineering course at Sparta Global  🌍
 - [*Control Flow exercises*](./python_fundamentals/ControlFlowExercises.py)
 - [*Function exercises*](./python_fundamentals/FunctionQuestions.py)
 
+3. ### Rest APIs
+
+- [*Notes from videos](./rest_apis/rest_apis_notes)
+
 Content | Completed?
 ------------ | ------------- 
 Data Concepts | 👍
