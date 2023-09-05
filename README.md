@@ -29,6 +29,9 @@ All my notes and projects from my Data Engineering course at Sparta Global  🌍
 3. ### Rest APIs
 
 - [*Notes from videos*](./rest_apis/rest_apis_notes.md)
+- [*Notes from Lecture about APIs in Python*](./rest_apis/apis.py)
+- [*Tiny Program using Postcode API from Lecture*](./rest_apis/postcode_api.py)
+- [*My own Program using the Dad Jokes API*](./rest_apis/dadjokes.py)
 
 Content | Completed?
 ------------ | ------------- 
