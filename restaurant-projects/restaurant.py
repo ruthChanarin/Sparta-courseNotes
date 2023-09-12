@@ -45,9 +45,8 @@ class Table:
 
         for order in self.bill:
             subtotal += order['price'] * order['quantity']
-            formatted_subtotal = format(subtotal, '.2f')
 
-        return formatted_subtotal
+        return subtotal
     
     def get_total(self, service_charge:int=0.10):
         
