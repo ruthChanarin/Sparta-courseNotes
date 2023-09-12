@@ -2,7 +2,7 @@
 by Ruth Chanarin
 11/09/23
 
-
+[My User Stories Board](https://trello.com/invite/b/AjnzPx3M/ATTI9f388a81cfe2f3c447ecb3a392b1418eA0275A5E/restaurant-project)
 
 Complete the `Table` class in `restaurant.py`. It should be able to instantiate objects to represent tables of diners at a restaurant.  When objects are created they are passed in the number of people dining at that table.  The class should have an instance variable called `bill` that is a list.  The class should also contain the following methods:
 - An `order` method that accepts an item and a price.  It should optionally accept a quantity, which should default to 1 if none is provided.  The method should append a menu item to the bill in the form of `{"item": item, "price": price, "quantity": quantity}`.  If the bill already contains an item with the same item name and price, then it should instead update the quantity by adding on the new quantity to the existing quantity.
