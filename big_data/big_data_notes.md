@@ -150,3 +150,5 @@ The Hadoop ecosystem also uses several other components, big data tools & framew
 - Flume
 - Sqoop
 - etc. 
+
+![Hadoop Ecosystem](hadoop-ecosystem.png)
